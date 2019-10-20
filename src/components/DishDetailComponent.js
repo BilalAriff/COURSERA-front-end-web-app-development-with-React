@@ -40,7 +40,7 @@ renderDishDetail(dish) {
                 return(
                     <CardBody key={comments.id}> 
                         <CardText>{comments.comment}</CardText>
-                        <CardText>-- {comments.author} ,  {comments.date}</CardText>
+                        <CardText>-- {comments.author} ,  {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comments.date)))}</CardText>
                         {console.log("Comments are working")}
                     </CardBody>
                 );
